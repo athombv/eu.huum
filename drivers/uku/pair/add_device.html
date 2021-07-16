@@ -1,0 +1,16 @@
+<script type="text/javascript">
+  Homey.showLoadingOverlay();
+  Homey.emit('getDevice')
+    .then(device => {
+      return Homey.addDevice(device);
+    })
+    .then(() => {
+      return Homey.done();
+    })
+    .catch(err => {
+      return Homey.alert(err);
+    })
+    .finally(() => {
+      Homey.hideLoadingOverlay();
+    })
+</script>

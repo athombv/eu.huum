@@ -1,0 +1,111 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "eu.huum",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "name": {
+    "en": "HUUM"
+  },
+  "brandColor": "#46827B",
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "description": {
+    "en": "Nordic Design Sauna Heaters & Controllers"
+  },
+  "category": [
+    "climate"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Emile Nijssen",
+    "email": "emile@athom.nl"
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "UKU"
+      },
+      "class": "thermostat",
+      "capabilities": [
+        "target_temperature",
+        "measure_temperature",
+        "measure_humidity",
+        "onoff.light",
+        "alarm_contact.door"
+      ],
+      "capabilitiesOptions": {
+        "target_temperature": {
+          "min": 40,
+          "max": 110,
+          "step": 1
+        },
+        "onoff.light": {
+          "uiQuickAction": false,
+          "title": {
+            "en": "Light",
+            "nl": "Verlichting"
+          }
+        },
+        "alarm_contact.door": {
+          "title": {
+            "en": "Door Open",
+            "nl": "Deur Open"
+          }
+        }
+      },
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/uku/assets/images/small.png",
+        "large": "/drivers/uku/assets/images/large.png",
+        "xlarge": "/drivers/uku/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "login",
+          "template": "login_credentials",
+          "options": {
+            "logo": "logo.svg",
+            "usernameLabel": {
+              "en": "E-mail address"
+            },
+            "usernamePlaceholder": {
+              "en": "john@doe.com"
+            },
+            "passwordLabel": {
+              "en": "Password"
+            },
+            "passwordPlaceholder": {
+              "en": "Password"
+            }
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "uku"
+    }
+  ]
+}
