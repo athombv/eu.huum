@@ -1,0 +1,12 @@
+{
+  "title": {
+    "en": "Time Left",
+    "nl": "Tijd Over"
+  },
+  "type": "number",
+  "units": "min",
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capabilities/huum_duration.svg"
+}

@@ -28,6 +28,52 @@
     "name": "Emile Nijssen",
     "email": "emile@athom.nl"
   },
+  "flow": {
+    "actions": [
+      {
+        "id": "stop_heater",
+        "title": {
+          "en": "Turn off the heater",
+          "nl": "Zet de heater uit"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=uku"
+          }
+        ]
+      },
+      {
+        "id": "light_on",
+        "title": {
+          "en": "Turn on the light",
+          "nl": "Zet het licht aan"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=uku"
+          }
+        ]
+      },
+      {
+        "id": "light_off",
+        "title": {
+          "en": "Turn off the light",
+          "nl": "Zet het licht uit"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=uku"
+          }
+        ]
+      }
+    ]
+  },
   "drivers": [
     {
       "name": {
@@ -38,14 +84,23 @@
         "target_temperature",
         "measure_temperature",
         "measure_humidity",
+        "onoff.heater",
         "onoff.light",
-        "alarm_contact.door"
+        "alarm_contact.door",
+        "huum_duration"
       ],
       "capabilitiesOptions": {
         "target_temperature": {
           "min": 40,
           "max": 110,
           "step": 1
+        },
+        "onoff.heater": {
+          "uiQuickAction": false,
+          "title": {
+            "en": "Heater",
+            "nl": "Heater"
+          }
         },
         "onoff.light": {
           "uiQuickAction": false,
@@ -107,5 +162,19 @@
       ],
       "id": "uku"
     }
-  ]
+  ],
+  "capabilities": {
+    "huum_duration": {
+      "title": {
+        "en": "Time Left",
+        "nl": "Tijd Over"
+      },
+      "type": "number",
+      "units": "min",
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capabilities/huum_duration.svg"
+    }
+  }
 }

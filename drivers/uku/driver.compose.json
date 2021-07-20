@@ -7,14 +7,23 @@
     "target_temperature",
     "measure_temperature",
     "measure_humidity",
+    "onoff.heater",
     "onoff.light",
-    "alarm_contact.door"
+    "alarm_contact.door",
+    "huum_duration"
   ],
   "capabilitiesOptions": {
     "target_temperature": {
       "min": 40,
       "max": 110,
       "step": 1
+    },
+    "onoff.heater": {
+      "uiQuickAction": false,
+      "title": {
+        "en": "Heater",
+        "nl": "Heater"
+      }
     },
     "onoff.light": {
       "uiQuickAction": false,

@@ -1,0 +1,25 @@
+{
+  "actions": [
+    {
+      "id": "stop_heater",
+      "title": {
+        "en": "Turn off the heater",
+        "nl": "Zet de heater uit"
+      }
+    },
+    {
+      "id": "light_on",
+      "title": {
+        "en": "Turn on the light",
+        "nl": "Zet het licht aan"
+      }
+    },
+    {
+      "id": "light_off",
+      "title": {
+        "en": "Turn off the light",
+        "nl": "Zet het licht uit"
+      }
+    }
+  ]
+}
