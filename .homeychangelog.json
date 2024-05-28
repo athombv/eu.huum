@@ -1,5 +1,8 @@
 {
   "1.0.0": {
     "en": "First version. Enjoy your sauna!"
+  },
+  "1.1.0": {
+    "en": "Added Flow When-cards for 'The heater turned on/off' and 'The lights turned on/off'."
   }
 }
