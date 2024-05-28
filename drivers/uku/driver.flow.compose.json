@@ -1,4 +1,34 @@
 {
+  "triggers": [
+    {
+      "id": "onoff.heater_true",
+      "title": {
+        "en": "The heater turned on",
+        "nl": "De heater is aangezet"
+      }
+    },
+    {
+      "id": "onoff.heater_false",
+      "title": {
+        "en": "The heater turned off",
+        "nl": "De heater is uitgezet"
+      }
+    },
+    {
+      "id": "onoff.light_true",
+      "title": {
+        "en": "The light turned on",
+        "nl": "Het licht is aangezet"
+      }
+    },
+    {
+      "id": "onoff.light_false",
+      "title": {
+        "en": "The light turned off",
+        "nl": "Het licht is uitgezet"
+      }
+    }
+  ],
   "actions": [
     {
       "id": "stop_heater",

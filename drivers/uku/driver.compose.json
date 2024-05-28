@@ -12,6 +12,9 @@
     "alarm_contact.door",
     "huum_duration"
   ],
+  "connectivity": [
+    "cloud"
+  ],
   "capabilitiesOptions": {
     "target_temperature": {
       "min": 40,

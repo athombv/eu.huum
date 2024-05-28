@@ -17,6 +17,7 @@
   "category": [
     "climate"
   ],
+  "support": "https://homey.app/support",
   "permissions": [],
   "images": {
     "small": "/assets/images/small.png",

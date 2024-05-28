@@ -18,6 +18,7 @@
   "category": [
     "climate"
   ],
+  "support": "https://homey.app/support",
   "permissions": [],
   "images": {
     "small": "/assets/images/small.png",
@@ -29,6 +30,64 @@
     "email": "emile@athom.nl"
   },
   "flow": {
+    "triggers": [
+      {
+        "id": "onoff.heater_true",
+        "title": {
+          "en": "The heater turned on",
+          "nl": "De heater is aangezet"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=uku"
+          }
+        ]
+      },
+      {
+        "id": "onoff.heater_false",
+        "title": {
+          "en": "The heater turned off",
+          "nl": "De heater is uitgezet"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=uku"
+          }
+        ]
+      },
+      {
+        "id": "onoff.light_true",
+        "title": {
+          "en": "The light turned on",
+          "nl": "Het licht is aangezet"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=uku"
+          }
+        ]
+      },
+      {
+        "id": "onoff.light_false",
+        "title": {
+          "en": "The light turned off",
+          "nl": "Het licht is uitgezet"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=uku"
+          }
+        ]
+      }
+    ],
     "actions": [
       {
         "id": "stop_heater",
@@ -88,6 +147,9 @@
         "onoff.light",
         "alarm_contact.door",
         "huum_duration"
+      ],
+      "connectivity": [
+        "cloud"
       ],
       "capabilitiesOptions": {
         "target_temperature": {
