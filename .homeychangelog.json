@@ -4,5 +4,8 @@
   },
   "1.1.0": {
     "en": "Added Flow When-cards for 'The heater turned on/off' and 'The lights turned on/off'."
+  },
+  "1.2.0": {
+    "en": "Added translations."
   }
 }
