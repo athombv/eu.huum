@@ -4,7 +4,18 @@
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "name": {
-    "en": "HUUM"
+    "en": "HUUM",
+    "nl": "HUUM",
+    "da": "HUUM",
+    "de": "HUUM",
+    "es": "HUUM",
+    "fr": "HUUM",
+    "it": "HUUM",
+    "no": "HUUM",
+    "sv": "HUUM",
+    "pl": "HUUM",
+    "ru": "HUUM",
+    "ko": "HUUM"
   },
   "brandColor": "#46827B",
   "platforms": [
@@ -12,7 +23,18 @@
     "cloud"
   ],
   "description": {
-    "en": "Nordic Design Sauna Heaters & Controllers"
+    "en": "Nordic Design Sauna Heaters & Controllers",
+    "nl": "Nordic Design Sauna Heaters & Controllers",
+    "da": "Nordic Design Sauna Heaters & Controllers",
+    "de": "Nordic Design Sauna Heaters & Controllers",
+    "es": "Nordic Design Sauna Heaters & Controllers",
+    "fr": "Nordic Design Sauna Heaters & Controllers",
+    "it": "Nordic Design Sauna Heaters & Controllers",
+    "no": "Nordic Design Sauna Heaters & Controllers",
+    "sv": "Nordic Design Sauna Heaters & Controllers",
+    "pl": "Nordic Design Sauna Heaters & Controllers",
+    "ru": "Nordic Design Sauna Heaters & Controllers",
+    "ko": "Nordic Design Sauna Heaters & Controllers"
   },
   "category": [
     "climate"

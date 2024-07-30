@@ -4,28 +4,68 @@
       "id": "onoff.heater_true",
       "title": {
         "en": "The heater turned on",
-        "nl": "De heater is aangezet"
+        "nl": "De heater is aangezet",
+        "da": "Varmeren tændte",
+        "de": "Die Heizung ist eingeschaltet",
+        "es": "La calefacción se encendió",
+        "fr": "Le radiateur s'est allumé",
+        "it": "Il riscaldatore si è acceso",
+        "no": "Varmeren er slått på",
+        "sv": "Värmaren slog på",
+        "pl": "Grzejnik został włączony",
+        "ru": "Обогреватель включился",
+        "ko": "히터가 켜졌습니다"
       }
     },
     {
       "id": "onoff.heater_false",
       "title": {
         "en": "The heater turned off",
-        "nl": "De heater is uitgezet"
+        "nl": "De heater is uitgezet",
+        "da": "Varmeren slukkede",
+        "de": "Die Heizung ist ausgeschaltet",
+        "es": "La calefacción se apagó",
+        "fr": "Le radiateur s'est éteint",
+        "it": "Il riscaldatore si è spento",
+        "no": "Varmeren er slått av",
+        "sv": "Värmaren slog av",
+        "pl": "Grzejnik został wyłączony",
+        "ru": "Обогреватель выключился",
+        "ko": "히터가 꺼졌습니다"
       }
     },
     {
       "id": "onoff.light_true",
       "title": {
         "en": "The light turned on",
-        "nl": "Het licht is aangezet"
+        "nl": "Het licht is aangezet",
+        "da": "Lyset tændte",
+        "de": "Das Licht ist eingeschaltet",
+        "es": "La luz se encendió",
+        "fr": "La lumière s'est allumée",
+        "it": "La luce si è accesa",
+        "no": "Lyset er slått på",
+        "sv": "Ljuset slog på",
+        "pl": "Światło zostało włączone",
+        "ru": "Свет включился",
+        "ko": "불이 켜졌습니다"
       }
     },
     {
       "id": "onoff.light_false",
       "title": {
         "en": "The light turned off",
-        "nl": "Het licht is uitgezet"
+        "nl": "Het licht is uitgezet",
+        "da": "Lyset slukkede",
+        "de": "Das Licht ist ausgeschaltet",
+        "es": "La luz se apagó",
+        "fr": "La lumière s'est éteinte",
+        "it": "La luce si è spenta",
+        "no": "Lyset er slått av",
+        "sv": "Ljuset slog av",
+        "pl": "Światło zostało wyłączone",
+        "ru": "Свет выключился",
+        "ko": "불이 꺼졌습니다"
       }
     }
   ],
@@ -34,21 +74,51 @@
       "id": "stop_heater",
       "title": {
         "en": "Turn off the heater",
-        "nl": "Zet de heater uit"
+        "nl": "Zet de heater uit",
+        "da": "Sluk varmeren",
+        "de": "Heizung ausschalten",
+        "es": "Apaga la calefacción",
+        "fr": "Éteindre le radiateur",
+        "it": "Spegni il riscaldatore",
+        "no": "Slå av varmeren",
+        "sv": "Stäng av värmaren",
+        "pl": "Wyłącz grzejnik",
+        "ru": "Выключить обогреватель",
+        "ko": "히터를 끄기"
       }
     },
     {
       "id": "light_on",
       "title": {
         "en": "Turn on the light",
-        "nl": "Zet het licht aan"
+        "nl": "Zet het licht aan",
+        "da": "Tænd lyset",
+        "de": "Licht einschalten",
+        "es": "Enciende la luz",
+        "fr": "Allumer la lumière",
+        "it": "Accendi la luce",
+        "no": "Slå på lyset",
+        "sv": "Slå på ljuset",
+        "pl": "Włącz światło",
+        "ru": "Включить свет",
+        "ko": "불을 켜기"
       }
     },
     {
       "id": "light_off",
       "title": {
         "en": "Turn off the light",
-        "nl": "Zet het licht uit"
+        "nl": "Zet het licht uit",
+        "da": "Sluk lyset",
+        "de": "Licht ausschalten",
+        "es": "Apaga la luz",
+        "fr": "Éteindre la lumière",
+        "it": "Spegni la luce",
+        "no": "Slå av lyset",
+        "sv": "Stäng av ljuset",
+        "pl": "Wyłącz światło",
+        "ru": "Выключить свет",
+        "ko": "불을 끄기"
       }
     }
   ]
