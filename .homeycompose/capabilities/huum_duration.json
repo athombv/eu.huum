@@ -1,7 +1,17 @@
 {
   "title": {
     "en": "Time Left",
-    "nl": "Tijd Over"
+    "nl": "Tijd Over",
+    "da": "Tid tilbage",
+    "de": "Zeit übrig",
+    "es": "Queda tiempo",
+    "fr": "Temps restant",
+    "it": "Tempo rimanente",
+    "no": "Tid igjen",
+    "sv": "Tid kvar",
+    "pl": "Pozostały czas",
+    "ru": "Оставшееся время",
+    "ko": "남은 시간"
   },
   "type": "number",
   "units": "min",

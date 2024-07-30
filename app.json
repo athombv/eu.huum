@@ -5,7 +5,18 @@
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "name": {
-    "en": "HUUM"
+    "en": "HUUM",
+    "nl": "HUUM",
+    "da": "HUUM",
+    "de": "HUUM",
+    "es": "HUUM",
+    "fr": "HUUM",
+    "it": "HUUM",
+    "no": "HUUM",
+    "sv": "HUUM",
+    "pl": "HUUM",
+    "ru": "HUUM",
+    "ko": "HUUM"
   },
   "brandColor": "#46827B",
   "platforms": [
@@ -13,7 +24,18 @@
     "cloud"
   ],
   "description": {
-    "en": "Nordic Design Sauna Heaters & Controllers"
+    "en": "Nordic Design Sauna Heaters & Controllers",
+    "nl": "Nordic Design Sauna Heaters & Controllers",
+    "da": "Nordic Design Sauna Heaters & Controllers",
+    "de": "Nordic Design Sauna Heaters & Controllers",
+    "es": "Nordic Design Sauna Heaters & Controllers",
+    "fr": "Nordic Design Sauna Heaters & Controllers",
+    "it": "Nordic Design Sauna Heaters & Controllers",
+    "no": "Nordic Design Sauna Heaters & Controllers",
+    "sv": "Nordic Design Sauna Heaters & Controllers",
+    "pl": "Nordic Design Sauna Heaters & Controllers",
+    "ru": "Nordic Design Sauna Heaters & Controllers",
+    "ko": "Nordic Design Sauna Heaters & Controllers"
   },
   "category": [
     "climate"
@@ -35,7 +57,17 @@
         "id": "onoff.heater_true",
         "title": {
           "en": "The heater turned on",
-          "nl": "De heater is aangezet"
+          "nl": "De heater is aangezet",
+          "da": "Varmeren tændte",
+          "de": "Die Heizung ist eingeschaltet",
+          "es": "La calefacción se encendió",
+          "fr": "Le radiateur s'est allumé",
+          "it": "Il riscaldatore si è acceso",
+          "no": "Varmeren er slått på",
+          "sv": "Värmaren slog på",
+          "pl": "Grzejnik został włączony",
+          "ru": "Обогреватель включился",
+          "ko": "히터가 켜졌습니다"
         },
         "args": [
           {
@@ -49,7 +81,17 @@
         "id": "onoff.heater_false",
         "title": {
           "en": "The heater turned off",
-          "nl": "De heater is uitgezet"
+          "nl": "De heater is uitgezet",
+          "da": "Varmeren slukkede",
+          "de": "Die Heizung ist ausgeschaltet",
+          "es": "La calefacción se apagó",
+          "fr": "Le radiateur s'est éteint",
+          "it": "Il riscaldatore si è spento",
+          "no": "Varmeren er slått av",
+          "sv": "Värmaren slog av",
+          "pl": "Grzejnik został wyłączony",
+          "ru": "Обогреватель выключился",
+          "ko": "히터가 꺼졌습니다"
         },
         "args": [
           {
@@ -63,7 +105,17 @@
         "id": "onoff.light_true",
         "title": {
           "en": "The light turned on",
-          "nl": "Het licht is aangezet"
+          "nl": "Het licht is aangezet",
+          "da": "Lyset tændte",
+          "de": "Das Licht ist eingeschaltet",
+          "es": "La luz se encendió",
+          "fr": "La lumière s'est allumée",
+          "it": "La luce si è accesa",
+          "no": "Lyset er slått på",
+          "sv": "Ljuset slog på",
+          "pl": "Światło zostało włączone",
+          "ru": "Свет включился",
+          "ko": "불이 켜졌습니다"
         },
         "args": [
           {
@@ -77,7 +129,17 @@
         "id": "onoff.light_false",
         "title": {
           "en": "The light turned off",
-          "nl": "Het licht is uitgezet"
+          "nl": "Het licht is uitgezet",
+          "da": "Lyset slukkede",
+          "de": "Das Licht ist ausgeschaltet",
+          "es": "La luz se apagó",
+          "fr": "La lumière s'est éteinte",
+          "it": "La luce si è spenta",
+          "no": "Lyset er slått av",
+          "sv": "Ljuset slog av",
+          "pl": "Światło zostało wyłączone",
+          "ru": "Свет выключился",
+          "ko": "불이 꺼졌습니다"
         },
         "args": [
           {
@@ -93,7 +155,17 @@
         "id": "stop_heater",
         "title": {
           "en": "Turn off the heater",
-          "nl": "Zet de heater uit"
+          "nl": "Zet de heater uit",
+          "da": "Sluk varmeren",
+          "de": "Heizung ausschalten",
+          "es": "Apaga la calefacción",
+          "fr": "Éteindre le radiateur",
+          "it": "Spegni il riscaldatore",
+          "no": "Slå av varmeren",
+          "sv": "Stäng av värmaren",
+          "pl": "Wyłącz grzejnik",
+          "ru": "Выключить обогреватель",
+          "ko": "히터를 끄기"
         },
         "args": [
           {
@@ -107,7 +179,17 @@
         "id": "light_on",
         "title": {
           "en": "Turn on the light",
-          "nl": "Zet het licht aan"
+          "nl": "Zet het licht aan",
+          "da": "Tænd lyset",
+          "de": "Licht einschalten",
+          "es": "Enciende la luz",
+          "fr": "Allumer la lumière",
+          "it": "Accendi la luce",
+          "no": "Slå på lyset",
+          "sv": "Slå på ljuset",
+          "pl": "Włącz światło",
+          "ru": "Включить свет",
+          "ko": "불을 켜기"
         },
         "args": [
           {
@@ -121,7 +203,17 @@
         "id": "light_off",
         "title": {
           "en": "Turn off the light",
-          "nl": "Zet het licht uit"
+          "nl": "Zet het licht uit",
+          "da": "Sluk lyset",
+          "de": "Licht ausschalten",
+          "es": "Apaga la luz",
+          "fr": "Éteindre la lumière",
+          "it": "Spegni la luce",
+          "no": "Slå av lyset",
+          "sv": "Stäng av ljuset",
+          "pl": "Wyłącz światło",
+          "ru": "Выключить свет",
+          "ko": "불을 끄기"
         },
         "args": [
           {
@@ -161,20 +253,50 @@
           "uiQuickAction": false,
           "title": {
             "en": "Heater",
-            "nl": "Heater"
+            "nl": "Heater",
+            "da": "Varmelegeme",
+            "de": "Heizung",
+            "es": "Calefactor",
+            "fr": "Chauffage",
+            "it": "Riscaldatore",
+            "no": "Varmeapparat",
+            "sv": "Värmare",
+            "pl": "Grzejnik",
+            "ru": "Обогреватель",
+            "ko": "히터"
           }
         },
         "onoff.light": {
           "uiQuickAction": false,
           "title": {
             "en": "Light",
-            "nl": "Verlichting"
+            "nl": "Verlichting",
+            "da": "Lys",
+            "de": "Licht",
+            "es": "Luz",
+            "fr": "Lumière",
+            "it": "Luce",
+            "no": "Lys",
+            "sv": "Ljuset",
+            "pl": "Światło",
+            "ru": "Свет",
+            "ko": "전등"
           }
         },
         "alarm_contact.door": {
           "title": {
             "en": "Door Open",
-            "nl": "Deur Open"
+            "nl": "Deur Open",
+            "da": "Dør åben",
+            "de": "Tür offen",
+            "es": "Puerta abierta",
+            "fr": "Porte ouverte",
+            "it": "Porta Aperta",
+            "no": "Dør åpen",
+            "sv": "Dörr öppen",
+            "pl": "Drzwi otwarte",
+            "ru": "Дверь открыта",
+            "ko": "문 열림"
           }
         }
       },
@@ -194,16 +316,56 @@
           "options": {
             "logo": "logo.svg",
             "usernameLabel": {
-              "en": "E-mail address"
+              "en": "E-mail address",
+              "da": "E-mail adresse",
+              "de": "E-Mail-Adresse",
+              "es": "Dirección de correo electrónico",
+              "fr": "Adresse e-mail",
+              "it": "Indirizzo e-mail",
+              "no": "E-postadresse",
+              "sv": "E-postadress",
+              "pl": "Adres e-mail",
+              "ru": "Адрес электронной почты",
+              "ko": "이메일 주소"
             },
             "usernamePlaceholder": {
-              "en": "john@doe.com"
+              "en": "john@doe.com",
+              "da": "john@doe.com",
+              "de": "john@doe.com",
+              "es": "john@doe.com",
+              "fr": "john@doe.com",
+              "it": "john@doe.com",
+              "no": "john@doe.com",
+              "sv": "john@doe.com",
+              "pl": "john@doe.com",
+              "ru": "john@doe.com",
+              "ko": "john@doe.com"
             },
             "passwordLabel": {
-              "en": "Password"
+              "en": "Password",
+              "da": "Adgangskode",
+              "de": "Passwort",
+              "es": "Contraseña",
+              "fr": "Mot de passe",
+              "it": "Password",
+              "no": "Passord",
+              "sv": "Lösenord",
+              "pl": "Hasło",
+              "ru": "Пароль",
+              "ko": "비밀번호"
             },
             "passwordPlaceholder": {
-              "en": "Password"
+              "en": "Password",
+              "da": "Adgangskode",
+              "de": "Passwort",
+              "es": "Contraseña",
+              "fr": "Mot de passe",
+              "it": "Password",
+              "no": "Passord",
+              "sv": "Lösenord",
+              "pl": "Hasło",
+              "ru": "Пароль",
+              "ko": "비밀번호"
             }
           }
         },
@@ -229,7 +391,17 @@
     "huum_duration": {
       "title": {
         "en": "Time Left",
-        "nl": "Tijd Over"
+        "nl": "Tijd Over",
+        "da": "Tid tilbage",
+        "de": "Zeit übrig",
+        "es": "Queda tiempo",
+        "fr": "Temps restant",
+        "it": "Tempo rimanente",
+        "no": "Tid igjen",
+        "sv": "Tid kvar",
+        "pl": "Pozostały czas",
+        "ru": "Оставшееся время",
+        "ko": "남은 시간"
       },
       "type": "number",
       "units": "min",

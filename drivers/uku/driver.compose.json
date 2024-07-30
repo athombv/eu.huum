@@ -25,20 +25,50 @@
       "uiQuickAction": false,
       "title": {
         "en": "Heater",
-        "nl": "Heater"
+        "nl": "Heater",
+        "da": "Varmelegeme",
+        "de": "Heizung",
+        "es": "Calefactor",
+        "fr": "Chauffage",
+        "it": "Riscaldatore",
+        "no": "Varmeapparat",
+        "sv": "Värmare",
+        "pl": "Grzejnik",
+        "ru": "Обогреватель",
+        "ko": "히터"
       }
     },
     "onoff.light": {
       "uiQuickAction": false,
       "title": {
         "en": "Light",
-        "nl": "Verlichting"
+        "nl": "Verlichting",
+        "da": "Lys",
+        "de": "Licht",
+        "es": "Luz",
+        "fr": "Lumière",
+        "it": "Luce",
+        "no": "Lys",
+        "sv": "Ljuset",
+        "pl": "Światło",
+        "ru": "Свет",
+        "ko": "전등"
       }
     },
     "alarm_contact.door": {
       "title": {
         "en": "Door Open",
-        "nl": "Deur Open"
+        "nl": "Deur Open",
+        "da": "Dør åben",
+        "de": "Tür offen",
+        "es": "Puerta abierta",
+        "fr": "Porte ouverte",
+        "it": "Porta Aperta",
+        "no": "Dør åpen",
+        "sv": "Dörr öppen",
+        "pl": "Drzwi otwarte",
+        "ru": "Дверь открыта",
+        "ko": "문 열림"
       }
     }
   },
@@ -58,16 +88,56 @@
       "options": {
         "logo": "logo.svg",
         "usernameLabel": {
-          "en": "E-mail address"
+          "en": "E-mail address",
+          "da": "E-mail adresse",
+          "de": "E-Mail-Adresse",
+          "es": "Dirección de correo electrónico",
+          "fr": "Adresse e-mail",
+          "it": "Indirizzo e-mail",
+          "no": "E-postadresse",
+          "sv": "E-postadress",
+          "pl": "Adres e-mail",
+          "ru": "Адрес электронной почты",
+          "ko": "이메일 주소"
         },
         "usernamePlaceholder": {
-          "en": "john@doe.com"
+          "en": "john@doe.com",
+          "da": "john@doe.com",
+          "de": "john@doe.com",
+          "es": "john@doe.com",
+          "fr": "john@doe.com",
+          "it": "john@doe.com",
+          "no": "john@doe.com",
+          "sv": "john@doe.com",
+          "pl": "john@doe.com",
+          "ru": "john@doe.com",
+          "ko": "john@doe.com"
         },
         "passwordLabel": {
-          "en": "Password"
+          "en": "Password",
+          "da": "Adgangskode",
+          "de": "Passwort",
+          "es": "Contraseña",
+          "fr": "Mot de passe",
+          "it": "Password",
+          "no": "Passord",
+          "sv": "Lösenord",
+          "pl": "Hasło",
+          "ru": "Пароль",
+          "ko": "비밀번호"
         },
         "passwordPlaceholder": {
-          "en": "Password"
+          "en": "Password",
+          "da": "Adgangskode",
+          "de": "Passwort",
+          "es": "Contraseña",
+          "fr": "Mot de passe",
+          "it": "Password",
+          "no": "Passord",
+          "sv": "Lösenord",
+          "pl": "Hasło",
+          "ru": "Пароль",
+          "ko": "비밀번호"
         }
       }
     },
