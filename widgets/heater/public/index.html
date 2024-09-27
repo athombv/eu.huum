@@ -172,9 +172,25 @@
     function onHomeyReady(Homey) {
       syncStatus();
 
+      Homey.on('status-changed', () => {
+        syncStatus();
+      });
+
       document.getElementById('device-status-onoff-toggle').addEventListener('click', () => {
-        document.body.classList.toggle('turned-on');
-        renderStatus();
+        document.body.classList.toggle('turned-on'); // Optimistic
+        // renderStatus();
+
+        Homey.api('POST', '/heating', {
+          userId: Homey.getSettings().device.userId,
+          saunaId: Homey.getSettings().device.saunaId,
+          onoff: document.body.classList.contains('turned-on'),
+        })
+          .then(() => {
+            syncStatus();
+          })
+          .catch(err => {
+            console.error(err); // TODO: Error overlay
+          });
       });
     }
 
@@ -193,11 +209,11 @@
     }
 
     function renderStatus() {
-
+      document.body.classList.toggle('turned-on', status.onoff_heater);
       document.getElementById('device-status-name').innerText = status.name;
       document.getElementById('device-status-text').innerText = document.body.classList.contains('turned-on')
-        ? `Heating from ${status.measure_temperature}° to ${status.target_temperature ?? '85'}°`
-        : `Off ● ${status.measure_temperature} °C`;
+        ? `Heating from ${status.measure_temperature ?? '-'}° to ${status.target_temperature ?? '-'}°`
+        : `Off ● ${status.measure_temperature ?? '-'} °C`;
 
     }
   </script>

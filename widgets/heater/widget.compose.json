@@ -16,6 +16,10 @@
     "getStatus": {
       "method": "GET",
       "path": "/status"
+    },
+    "setHeating": {
+      "method": "POST",
+      "path": "/heating"
     }
   }
 }
