@@ -69,6 +69,8 @@
       background-size: cover;
 
       font-family: Manrope, sans-serif;
+
+      overflow: hidden;
     }
 
     .huum-on {
@@ -146,15 +148,92 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
+
+
+    /* Steam animation */
+    #steam {
+      position: absolute;
+      z-index: 100;
+      pointer-events: none;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+
+      opacity: 0.0;
+      transition: all 2s;
+    }
+
+    body.turned-on #steam {
+      opacity: 1.0;
+    }
+
+    #steam>div {
+      display: flex;
+      justify-content: center;
+      width: 150%;
+      position: absolute;
+    }
+
+    #steam>div>span {
+      position: relative;
+      bottom: 0;
+      margin: 0 2px 50px;
+      min-width: 8px;
+      height: 120px;
+      background: white;
+      border-radius: 50%;
+      animation: animate 3s linear infinite;
+      opacity: 0;
+      filter: blur(8px);
+      animation-delay: calc(var(--i) * 1s);
+    }
+
+    @keyframes animate {
+      0% {
+        transform: translateY(0) scaleX(1);
+        opacity: 0;
+      }
+
+      15% {
+        opacity: 1;
+      }
+
+      50% {
+        transform: translateY(-75px) scaleX(5);
+      }
+
+      95% {
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(-150px) scaleX(10);
+      }
+    }
   </style>
 </head>
 
 <body class="homey-widget">
 
-  <div class="huum-on">
-    <div class="huum-on-inner">
-
+  <div id="steam">
+    <div>
+      <span style="--i:.5"></span>
+      <span style="--i:.3"></span>
+      <span style="--i:1.5"></span>
+      <span style="--i:2.5"></span>
+      <span style="--i:.1"></span>
+      <span style="--i:.1"></span>
+      <span style="--i:1.5"></span>
+      <span style="--i:1"></span>
     </div>
+  </div>
+
+  <div class="huum-on">
+    <div class="huum-on-inner"></div>
   </div>
 
   <div id="device-status">
@@ -178,18 +257,17 @@
 
       document.getElementById('device-status-onoff-toggle').addEventListener('click', () => {
         document.body.classList.toggle('turned-on'); // Optimistic
-        // renderStatus();
 
         Homey.api('POST', '/heating', {
           userId: Homey.getSettings().device.userId,
           saunaId: Homey.getSettings().device.saunaId,
           onoff: document.body.classList.contains('turned-on'),
         })
-          .then(() => {
-            syncStatus();
-          })
           .catch(err => {
-            console.error(err); // TODO: Error overlay
+            console.error(err);
+          })
+          .finally(() => {
+            syncStatus();
           });
       });
     }
@@ -201,10 +279,12 @@
         .then(status_ => {
           status = status_;
           renderStatus();
-          Homey.ready();
         })
         .catch(err => {
-          console.error(err); // TODO: Error overlay
+          console.error(err);
+        })
+        .finally(() => {
+          Homey.ready();
         });
     }
 

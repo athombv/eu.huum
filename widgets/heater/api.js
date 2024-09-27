@@ -30,7 +30,7 @@ module.exports = {
     return {
       name: device.getName(),
       onoff_heater: device.getCapabilityValue('onoff.heater'),
-      onoff_lights: device.getCapabilityValue('onoff.lights'),
+      onoff_lights: device.getCapabilityValue('onoff.light'),
       target_temperature: device.getCapabilityValue('target_temperature'),
       measure_temperature: device.getCapabilityValue('measure_temperature'),
     };
