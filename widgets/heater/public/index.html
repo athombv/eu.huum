@@ -1,0 +1,206 @@
+<html>
+
+<head>
+  <link
+    rel="prefetch"
+    href="/off.png"
+  />
+  <link
+    rel="prefetch"
+    href="/on.png"
+  />
+  <style>
+    @font-face {
+      font-family: Manrope;
+      src: url(./Manrope-VariableFont_wght.ttf);
+    }
+
+    @keyframes pulse {
+      0% {
+        opacity: 1.0;
+      }
+
+      10% {
+        opacity: 0.9;
+      }
+
+      20% {
+        opacity: 0.7;
+      }
+
+      30% {
+        opacity: 0.8;
+      }
+
+      40% {
+        opacity: 0.9;
+      }
+
+      50% {
+        opacity: 0.8;
+      }
+
+      60% {
+        opacity: 0.6;
+      }
+
+      70% {
+        opacity: 0.7;
+      }
+
+      80% {
+        opacity: 0.8;
+      }
+
+      90% {
+        opacity: 0.9;
+      }
+
+      100% {
+        opacity: 1.0;
+      }
+    }
+
+    body {
+      padding: 0 !important;
+      margin: 0 !important;
+
+      background: url(./off.png) no-repeat right center;
+      background-size: cover;
+
+      font-family: Manrope, sans-serif;
+    }
+
+    .huum-on {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+
+      opacity: 0;
+      transition: all 1s;
+    }
+
+    body.turned-on .huum-on {
+      opacity: 1;
+    }
+
+    .huum-on-inner {
+      width: 100%;
+      height: 100%;
+      background: url(./on.png) no-repeat right center;
+      background-size: cover;
+      animation: pulse 10s infinite;
+    }
+
+    #device-status {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      bottom: 20px;
+    }
+
+    #device-status-onoff {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 100px;
+      height: 24px;
+      width: 48px;
+      padding: 3px;
+      box-sizing: content-box;
+      margin-bottom: 10px;
+    }
+
+    #device-status-onoff-toggle {
+      background: white;
+      border-radius: 24px;
+      height: 24px;
+      width: 24px;
+
+      transition: all 0.5s;
+    }
+
+    body.turned-on #device-status-onoff-toggle {
+      transform: translateX(24px);
+      background-color: #89CDB8;
+    }
+
+    #device-status-name {
+      font-size: 23px;
+      font-weight: 600;
+      color: white;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 4px;
+    }
+
+    #device-status-text {
+      font-size: 13px;
+      line-height: 20px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.2);
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  </style>
+</head>
+
+<body class="homey-widget">
+
+  <div class="huum-on">
+    <div class="huum-on-inner">
+
+    </div>
+  </div>
+
+  <div id="device-status">
+    <div id="device-status-onoff">
+      <div id="device-status-onoff-toggle"></div>
+    </div>
+    <div id="device-status-name"></div>
+    <div id="device-status-text">Heating towards 80 °C</div>
+    <div id="device-status-temperature"></div>
+  </div>
+
+  <script type="text/javascript">
+    let status;
+
+    function onHomeyReady(Homey) {
+      syncStatus();
+
+      document.getElementById('device-status-onoff-toggle').addEventListener('click', () => {
+        document.body.classList.toggle('turned-on');
+        renderStatus();
+      });
+    }
+
+    function syncStatus() {
+      const { device } = Homey.getSettings();
+
+      Homey.api('GET', `/status?userId=${device.userId}&saunaId=${device.saunaId}`)
+        .then(status_ => {
+          status = status_;
+          renderStatus();
+          Homey.ready();
+        })
+        .catch(err => {
+          console.error(err); // TODO: Error overlay
+        });
+    }
+
+    function renderStatus() {
+
+      document.getElementById('device-status-name').innerText = status.name;
+      document.getElementById('device-status-text').innerText = document.body.classList.contains('turned-on')
+        ? `Heating from ${status.measure_temperature}° to ${status.target_temperature ?? '85'}°`
+        : `Off ● ${status.measure_temperature} °C`;
+
+    }
+  </script>
+</body>
+
+</html>

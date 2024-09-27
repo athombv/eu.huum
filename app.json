@@ -448,6 +448,30 @@
       "id": "uku"
     }
   ],
+  "widgets": {
+    "heater": {
+      "name": {
+        "en": "Heater"
+      },
+      "height": 150,
+      "settings": [
+        {
+          "id": "device",
+          "type": "autocomplete",
+          "title": {
+            "en": "Heater"
+          }
+        }
+      ],
+      "api": {
+        "getStatus": {
+          "method": "GET",
+          "path": "/status"
+        }
+      },
+      "id": "heater"
+    }
+  },
   "capabilities": {
     "huum_duration": {
       "title": {
