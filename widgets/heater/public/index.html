@@ -73,6 +73,30 @@
       overflow: hidden;
     }
 
+    #error {
+      position: absolute;
+      z-index: 1000;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+      padding: 0 50px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      text-align: center;
+
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+
+      visibility: hidden;
+    }
+
     .huum-on {
       position: absolute;
       left: 0;
@@ -243,6 +267,8 @@
 
 <body class="homey-widget">
 
+  <div id="error"></div>
+
   <div id="steam">
     <div>
       <span style="--i:.5"></span>
@@ -305,8 +331,18 @@
       });
     }
 
+    function showError(message) {
+      document.getElementById('error').innerText = message;
+      document.getElementById('error').style.visibility = 'visible';
+      Homey.ready();
+    }
+
     function syncStatus() {
       const { device } = Homey.getSettings();
+      if (!device) {
+        showError('Please select your HUUM from the widget\'s settings.');
+        return;
+      }
 
       Homey.api('GET', `/status?userId=${device.userId}&saunaId=${device.saunaId}`)
         .then(status_ => {
@@ -314,7 +350,8 @@
           renderStatus();
         })
         .catch(err => {
-          console.error(err);
+          showError(`Please select your HUUM from the widget's settings.`);
+          return;
         })
         .finally(() => {
           Homey.ready();
