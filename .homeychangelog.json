@@ -13,5 +13,8 @@
   },
   "1.4.0": {
     "en": "Added a widget for Homey Dashboards."
+  },
+  "1.4.1": {
+    "en": "Added haptic feedback for the widget."
   }
 }
