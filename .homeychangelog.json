@@ -16,5 +16,8 @@
   },
   "1.4.1": {
     "en": "Added haptic feedback for the widget."
+  },
+  "1.5.0": {
+    "en": "Added a Flow card to turn on the heater. Increased default duration from 2h to 3h. Increased default temperature from 65 C to 80 C."
   }
 }
