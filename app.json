@@ -152,6 +152,30 @@
     ],
     "actions": [
       {
+        "id": "start_heater",
+        "title": {
+          "en": "Turn on the heater",
+          "nl": "Zet de heater aan",
+          "da": "Tænd for varmeren",
+          "de": "Heizung einschalten",
+          "es": "Enciende la calefacción",
+          "fr": "Allumer le radiateur",
+          "it": "Accendi il riscaldatore",
+          "no": "Slå på varmeren",
+          "sv": "Slå på värmaren",
+          "pl": "Włącz grzejnik",
+          "ru": "Включить обогреватель",
+          "ko": "히터 켜기"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=uku"
+          }
+        ]
+      },
+      {
         "id": "stop_heater",
         "title": {
           "en": "Turn off the heater",
